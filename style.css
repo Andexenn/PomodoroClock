@@ -1,0 +1,8 @@
+body {
+  background: linear-gradient(to bottom, #e64980 5%, #ff8787 95%);
+  min-height: 100vh;
+}
+
+.timer h3, .btn{
+  cursor: pointer;
+}

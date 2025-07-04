@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet">
     <!--* custom css -->
@@ -16,32 +16,40 @@
     <link rel="icon" href="https://fav.farm/🔥" />
 </head>
 
-<body class="bg-red-400 h-screen">
+<body class="h-screen pt-[30px]">
 
-    <h1 class="text-3xl">Pomodoro Clock</h1>
+    <h1 class="title border-b-2 border-white w-1/2 text-[100px] text-center mx-auto font-[Lilita] font-[800] bg-linear-to-r
+         from-orange-100 to-yellow-200 bg-clip-text text-transparent">
+        Pomodoro Clock
+    </h1>
 
-    <div>
-        <div class="mode">
-            <h3>Pomodoro</h3>
-            <h3>Short Break</h3>
-            <h3>Long Break</h3>
+    <div class="timer flex flex-col items-center mt-10 w-1/2 mx-auto bg-[#d9cdf7e7] font-[montserrat] border rounded-b">
+        <div class="flex w-full text-center text-[20px]">
+            <h3 data-time="25" class="flex-1 border-b border-r">Pomodoro</h3>
+            <h3 data-time="5" class="flex-1 border-b border-r">Short Break</h3>
+            <h3 data-time="15" class="flex-1 border-b">Long Break</h3>
         </div>
 
-        <div class="display-time">
-
+        <div class="display-time py-3 text-[100px] font-[Funnel-sans]">
+            25
         </div>
 
-        <button>
+        <p class="text-[20px] mb-2">Your Streak: <span>0</span></p>
+
+        <button class="btn bg-blue-500 w-full p-3 font-bold text-3xl">
             START
         </button>
     </div>
 
-    <p>Your Streak: <span></span></p>
+    
 
-    <h2>TO DO LIST</h2>
-    <ul class="TO-DO">
+    <div class="to-do">
+        <h2>TO DO LIST</h2>
+        <ul class="TO-DO">
+    
+        </ul>
+    </div>
 
-    </ul>
     <script src="./main.js"></script>
 </body>
 
