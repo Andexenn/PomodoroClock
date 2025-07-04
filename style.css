@@ -3,6 +3,16 @@ body {
   min-height: 100vh;
 }
 
+.timer h3{
+  background-color: #fff9d0;
+}
+
+.timer h3:hover, .btn:hover{
+  opacity: 0.8;
+}
+
 .timer h3, .btn{
   cursor: pointer;
 }
+
+

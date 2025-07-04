@@ -7,22 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-50: oklch(97.1% 0.013 17.38);
-    --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-orange-100: oklch(95.4% 0.038 75.164);
-    --color-orange-300: oklch(83.7% 0.128 66.29);
-    --color-orange-800: oklch(47% 0.157 37.304);
     --color-yellow-200: oklch(94.5% 0.129 101.54);
-    --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-blue-50: oklch(97% 0.014 254.604);
     --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-violet-200: oklch(89.4% 0.057 293.283);
-    --color-violet-300: oklch(81.1% 0.111 293.571);
-    --color-violet-500: oklch(60.6% 0.25 292.717);
-    --color-pink-500: oklch(65.6% 0.241 354.308);
-    --color-pink-800: oklch(45.9% 0.187 3.815);
-    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
@@ -32,8 +20,9 @@
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
     --radius-2xl: 1rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -187,6 +176,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
@@ -208,6 +200,9 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-1\/3 {
+    width: calc(1/3 * 100%);
+  }
   .w-full {
     width: 100%;
   }
@@ -226,8 +221,8 @@
   .items-center {
     align-items: center;
   }
-  .rounded {
-    border-radius: 0.25rem;
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
   }
   .rounded-b {
     border-bottom-right-radius: 0.25rem;
@@ -252,41 +247,38 @@
   .border-white {
     border-color: var(--color-white);
   }
-  .bg-\[\#9a79ebe7\] {
-    background-color: #9a79ebe7;
+  .bg-\[\#0\] {
+    background-color: #0;
   }
-  .bg-\[\#887e29e7\] {
-    background-color: #887e29e7;
+  .bg-\[\#000\] {
+    background-color: #000;
   }
-  .bg-\[\#442988e7\] {
-    background-color: #442988e7;
-  }
-  .bg-\[\#a4ff83e7\] {
-    background-color: #a4ff83e7;
-  }
-  .bg-\[\#aba994e7\] {
-    background-color: #aba994e7;
+  .bg-\[\#\] {
+    background-color: #;
   }
   .bg-\[\#d9cdf7e7\] {
     background-color: #d9cdf7e7;
   }
-  .bg-\[\#f0eab3e7\] {
-    background-color: #f0eab3e7;
+  .bg-\[\#fff\] {
+    background-color: #fff;
   }
-  .bg-\[\#ff8383e7\] {
-    background-color: #ff8383e7;
+  .bg-\[\#ffffff4f\] {
+    background-color: #ffffff4f;
   }
-  .bg-\[\#fff383e7\] {
-    background-color: #fff383e7;
+  .bg-\[\#ffffff25\] {
+    background-color: #ffffff25;
   }
-  .bg-\[\#ffffffe7\] {
-    background-color: #ffffffe7;
+  .bg-\[\#ffffff38\] {
+    background-color: #ffffff38;
   }
-  .bg-blue-50 {
-    background-color: var(--color-blue-50);
+  .bg-\[\#ffffff66\] {
+    background-color: #ffffff66;
   }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .bg-linear-to-r {
     --tw-gradient-position: to right;
@@ -306,65 +298,20 @@
   .bg-clip-text {
     background-clip: text;
   }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
-  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
-  }
-  .p-5 {
-    padding: calc(var(--spacing) * 5);
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
-  .pt-\[0px\] {
-    padding-top: 0px;
-  }
   .pt-\[30px\] {
     padding-top: 30px;
-  }
-  .pt-\[40px\] {
-    padding-top: 40px;
-  }
-  .pt-\[60px\] {
-    padding-top: 60px;
   }
   .text-center {
     text-align: center;
   }
-  .font-\[F\] {
-    font-family: F;
-  }
-  .font-\[Fu\] {
-    font-family: Fu;
-  }
-  .font-\[Fun\] {
-    font-family: Fun;
-  }
-  .font-\[Funn\] {
-    font-family: Funn;
-  }
-  .font-\[Funne\] {
-    font-family: Funne;
-  }
-  .font-\[Funnel-\] {
-    font-family: Funnel-;
-  }
-  .font-\[Funnel-s\] {
-    font-family: Funnel-s;
-  }
-  .font-\[Funnel-san\] {
-    font-family: Funnel-san;
-  }
-  .font-\[Funnel-sana\] {
-    font-family: Funnel-sana;
-  }
   .font-\[Funnel-sans\] {
     font-family: Funnel-sans;
-  }
-  .font-\[Funnel\] {
-    font-family: Funnel;
   }
   .font-\[Lilita\] {
     font-family: Lilita;
@@ -376,16 +323,17 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
-  .text-5xl {
-    font-size: var(--text-5xl);
-    line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
+  .text-\[0px\] {
+    font-size: 0px;
   }
   .text-\[20px\] {
     font-size: 20px;
+  }
+  .text-\[30px\] {
+    font-size: 30px;
+  }
+  .text-\[50px\] {
+    font-size: 50px;
   }
   .text-\[100px\] {
     font-size: 100px;
@@ -398,29 +346,14 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .text-\[1\] {
-    color: 1;
+  .text-\[5\] {
+    color: 5;
   }
-  .text-\[2\] {
-    color: 2;
+  .text-\[50\] {
+    color: 50;
   }
-  .text-\[3\] {
-    color: 3;
-  }
-  .text-\[10\] {
-    color: 10;
-  }
-  .text-\[20\] {
-    color: 20;
-  }
-  .text-\[20p\] {
-    color: 20p;
-  }
-  .text-\[100\] {
-    color: 100;
-  }
-  .text-\[100p\] {
-    color: 100p;
+  .text-\[50p\] {
+    color: 50p;
   }
   .text-transparent {
     color: transparent;
