@@ -28,6 +28,9 @@ function timer(seconds) {
 
       items = items.filter((item) => item.done);
       populateList(items, TODO);
+      const audio = document.querySelector("audio");
+      audio.currentTime = 0;
+      audio.play();
       return;
     }
     displayTimeLeft(secondsLeft);
