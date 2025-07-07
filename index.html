@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Clock</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,11 +20,13 @@
 <body class="pt-[30px]">
 
     <h1 class="title border-b-2 border-white w-1/2 text-[100px] text-center mx-auto font-[Lilita] font-[800] bg-linear-to-r
-         from-orange-100 to-yellow-200 bg-clip-text text-transparent">
+         from-orange-100 to-yellow-200 bg-clip-text text-transparent" data-aos = "fade-down">
         Pomodoro Clock
     </h1>
 
-    <div class="timer flex flex-col items-center mt-10 w-1/2 mx-auto bg-[#d9cdf7e7] font-[montserrat] border rounded-lg overflow-hidden">
+    <div
+        data-aos="fade-up"
+        class="timer flex flex-col items-center mt-10 w-1/2 mx-auto bg-[#d9cdf7e7] font-[montserrat] border rounded-lg overflow-hidden">
         <div class="flex w-full text-center text-[20px]">
             <h3 data-time="25" class="flex-1 border-b border-r">Pomodoro</h3>
             <h3 data-time="5" class="flex-1 border-b border-r">Short Break</h3>
@@ -41,20 +44,35 @@
         </button>
     </div>
 
-    
-    <div class="wrapper mt-5 bg-[#ffffff66] w-1/3 mx-auto rounded-2xl overflow-hidden">
+
+    <div
+    data-aos="flip-up"
+    class="wrapper mt-5 bg-[#ffffff66] w-1/3 mx-auto rounded-2xl overflow-hidden">
         <h2 class="text-center font-[montserrat] font-bold text-[30px] py-2">TO DO LIST</h2>
         <ul class="to-do text-center">
             <li>Add your task list here</li>
         </ul>
         <form class="add-items text-center w-full flex mt-2 ">
-            <input class="flex-1 text-center border-none outline-none" type="text" name="item" placeholder="Item Name" required>
-            <input class="flex-1 cursor-pointer hover:bg-[#ffffff48]"type="submit" value="+ Add Item">
+            <input class="flex-1 text-center border-none outline-none" type="text" name="item" placeholder="Item Name"
+                required>
+            <input class="flex-1 cursor-pointer hover:bg-[#ffffff48]" type="submit" value="+ Add Item">
         </form>
     </div>
 
     <audio src="./src/sound/hihat.wav"></audio>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 100,
+            delay: 0,
+            duration: 1200,       
+            easing: 'ease',       
+            once: true,           
+            mirror: false
+        }
+        );
+    </script>
     <script src="./main.js"></script>
 </body>
 
